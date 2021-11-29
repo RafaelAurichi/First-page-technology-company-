@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nome da Empresa</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="">
+    <meta name="author" content="Rafael Aurichi">
+    <meta name="keywords" content="plavras-chaves">
+    <meta name="description" content="descriçao conteudo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    min-width: 500px;
+    overflow-x: hidden;
+}
+
+.clear {
+    clear: both;
+}
+
+.container {
+	max-width: 1300px;
+	margin:0 auto;
+}
+
+
+/*--------OPEN HEADER------------*/
+header {
+    background-image: url(imagens/capa.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 90vh;
+    min-height: 500px;
+    padding: 20px 5%;
+}
+
+.logo {
+    float: left;
+    height: 100px;
+    width: 120px;
+    background-color: antiquewhite;
+    text-align: center;
+    padding-top: 40px;
+}
+
+header nav {
+    float: right;
+    margin-top: 35px;
+    font-weight: 100;
+}
+
+header nav.desktop-menu li {
+    list-style-type: none;
+    float: left;
+}
+
+header nav.desktop-menu li:not(#last) {
+    padding-right: 60px;
+}
+
+nav.mobile-menu {
+    display: none;
+    background-image: url(imagens/menu.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+nav.mobile-menu ul {
+    opacity: 0;
+    transition: 1s;
+}
+
+nav.mobile-menu:hover ul {
+    opacity: 1;
+}
+
+nav.mobile-menu ul {
+    position: relative;
+    top: 40px;
+    list-style-type: none;
+    text-align: center;
+    border: 2px solid rgba(71, 38, 99, 1);
+}
+
+nav.mobile-menu ul li {
+    padding-bottom: 10px;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+.mobile-menu ul div:hover  {
+    background-color: rgba(71, 38, 99, 1);
+}
+
+header nav a {
+    text-decoration: none;
+    list-style-type: none;
+    color: antiquewhite;
+}
+
+header nav a:hover {
+    font-weight: bold;
+}
+
+.texto-header {
+    float: right;
+    margin: 50px 10%;
+    max-width: 700px;
+    color: white;
+}
+
+.texto-header h1 {
+    font-weight: lighter;
+    font-size: 50px;
+}
+
+.texto-header p {
+    font-weight: lighter;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 650px) {
+    header nav.desktop-menu {
+        display: none;
+    }
+    header nav.mobile-menu {
+        display: block;
+    }
+    .texto-header {
+        margin: -60px 10%;
+    }
+    .texto-header h1 {
+        font-size: 40px;
+    }
+    .texto-header p {
+        font-size: 12px;
+    }
+    header nav a:hover {
+        font-weight: 100;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .texto-header {
+        float: left;
+        margin: -40px 5%;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .texto-header {
+        margin: -70px 0%;
+    }
+}
+/*--------CLOSE HEADER------------*/
+
+
+/*--------OPEN MAIN---------------*/
+/*--------OPEN SERVIÇOS----------------*/
+.serviços {
+    background-color: #472663;
+    padding: 0px 5%;
+    height: 400px;
+    min-height: 400px;
+    -webkit-box-shadow: 0px 0px 85px 9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 85px 9px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 85px 9px rgba(0,0,0,0.75);
+}
+
+.texto-serviços {
+    float: left;
+    color: white;
+    width: 50%;
+    transform: translateX(15%);
+    margin-top: 60px;
+}
+
+.serviços h1 {
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.serviços p {
+    margin-top: 15px;
+    font-weight: normal;
+}
+
+.serviços ul {
+    margin-left: 15px;
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.serviços input {
+    margin-top: 20px;
+    background-color: #ff703e;
+    border: none;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    border-radius: 20px;
+    width: 170px;
+    cursor: pointer;
+}
+
+.serviços input:hover {
+    background-color: #d45628;
+}
+
+.celular {
+    float: right;
+    width: 50%;
+    background-image: url(imagens/celular.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 500px;
+    position: relative;
+    top: -100px;
+    right: 5%;
+    animation: celular 2s infinite;
+    animation-timing-function: ease-in;
+}
+
+@keyframes celular {
+    from {
+        transform: rotateY(0);
+
+    }
+
+    50% {
+        transform: rotateY(180);
+    }
+
+    to {
+        transform: rotateY(0);
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .serviços p {
+        width: 50%;
+    }
+    .texto-serviços {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .celular {
+        display: none;
+    }
+    .serviços {
+        text-align: center;
+        padding: 50px 5%;
+    }
+    .texto-serviços {
+        float: none;
+        display: inline-block;
+        transform: translateX(0%);
+        width: 100%;
+    }
+    .serviços p {
+        width: 100%;
+    }
+    .serviços h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 659px) {
+    .serviços {
+        padding: 20px 5%;
+    }
+}
+/*--------CLOSE SERVIÇOS----------------*/
+
+
+/*--------OPEN SOBRE--------------------*/
+.sobre {
+    padding: 200px 5%;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.texto-sobre {
+    margin: 0px auto;
+    text-align: center;
+    width: 80%;
+}
+
+.texto-sobre h1 {
+    font-size: 50px;
+    font-weight: 100;
+    color: #472663;
+}
+
+.texto-sobre p {
+    font-size: 20px;
+    margin-top: 25px;
+    line-height: 25px;
+    color: #472663;
+}
+
+.sobre img {
+    margin-top: 10%; 
+    display: inline-block;
+    width: 90%;
+    -webkit-box-shadow: 0px 0px 118px -23px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 118px -23px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 118px -23px rgba(0,0,0,0.75);
+}
+
+@media screen and (max-width: 700px) {
+    .sobre {
+        padding: 100px 5%;
+    }
+    .texto-sobre h1 {
+        font-size: 40px;
+    }
+    .texto-sobre p {
+        font-size: 15px;
+        margin-top: 25px;
+    }
+}
+/*--------CLOSE SOBRE-------------------*/
+
+
+/*--------OPEN EQUIPE-------------------*/
+.equipe {
+    min-height: 550px;
+    margin-top: -15%;
+}
+
+.pt1 {
+    background-color: #835fa8;
+    width: 50%;
+    min-height: 550px;
+    padding-top: 20%;
+    color: white;
+    float: left;
+}
+
+.pt1 h2 {
+    font-style: italic;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+.pt1 p {
+    line-height: 30px;
+    margin-top: 10px;
+    width: 90%;
+    min-width: 233;
+}
+
+.containerpt1 {
+    width: 100%;
+    float: right;
+    padding-left: 15%;
+    max-width: 650px;
+    margin-bottom: 48px;
+}
+
+.containerpt2 {
+    width: 100%;
+    max-width: 650px;
+    padding-left: 3%;
+    margin-bottom: 56px;
+}
+
+.pt2 {
+    float: right;
+    background-color: whitesmoke;
+    width: 50%;
+    min-height: 550px;
+    padding-top: 20%;
+    color: #472663;
+}
+
+.user {
+    height: 60px;
+    width: 60px;
+    background-image: url(imagens/user.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: right;
+    position: relative;
+    right: 54%;
+}
+
+.pt2 h2 {
+    font-style: italic;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+.pt2 span {
+    font-weight: 100;
+}
+
+.pt2 p {
+    width: 87%;
+    line-height: 30px;
+    margin-top: 15px;
+}
+
+.slider {
+    background-color: red;
+}
+
+.slider span{
+    float: left;
+    margin-top: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: grey;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 2500px) {
+    .equipe {
+        max-height: 350px;
+        margin-top: -10%;
+    }
+    .pt1 {
+        padding-top: 10%;
+    }
+    .pt2 {
+        padding-top: 10%;
+    }
+    .containerpt1, .containerpt2 {
+        margin-bottom: 0px;
+        margin-top: -50px;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .equipe {
+        max-height: 350px;
+        margin-top: -10%;
+    }
+    .pt1 {
+        padding-top: 15%;
+    }
+    .pt2 {
+        padding-top: 15%;
+    }
+}
+
+@media screen and (min-width: 1766px) {
+    .pt2, .pt1 {
+        height: 650px;
+    }
+    .containerpt1, .containerpt2 {
+        margin-bottom: 0px;
+        margin-top: -50px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .user {
+        right: 50%;
+    } 
+}
+
+@media screen and (max-width: 1200px) {
+    .user {
+        right: 45%;
+    } 
+}
+
+@media screen and (max-width: 1100px) {
+    .user {
+        right: 40%;
+    } 
+}
+
+@media screen and (max-width: 1000px) {
+    .user {
+        right: 35%;
+    } 
+}
+
+@media screen and (max-width: 900px) {
+    .user {
+        right: 25%;
+    } 
+}
+
+@media screen and (max-width: 900px) {
+    .user {
+        right: 25%;
+    } 
+}
+
+@media screen and (max-width: 800px) {
+    .user {
+        right: 15%;
+    } 
+}
+
+@media screen and (max-width: 700px) {
+    .user {
+        right: 80%;
+        top: -65px;
+    } 
+}
+
+@media screen and (max-width: 600px) {
+    .user {
+        right: 75%;
+        top: -65px;
+    } 
+}
+
+@media screen and (max-width: 626px) {
+    .pt1 {
+        padding-top: 15%;
+    }
+    .pt2 {
+        padding-top: 15%;
+    }
+}
+
+@media screen and (max-width: 582px) {
+    .pt2 {
+        padding-top: 20%;
+        min-height: 550px;
+    }
+    .pt1 p {
+        min-height: 360px;
+    }
+    .containerpt1 {
+        margin-bottom: 22px;
+    }
+    .containerpt2 {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 572px) {
+    .containerpt2 {
+        padding-left: 8%;
+    }
+    .user {
+        top: -110px;
+    } 
+    .containerpt1 {
+        margin-bottom: 12px;
+    }
+    .pt1 {
+        padding-top: 10%;
+    }
+    .containerpt2 {
+        margin-bottom: 10px;
+    }
+    .user {
+        right: 75%;
+        top: -60px;
+    } 
+}
+
+@media screen and (max-width: 542px) {
+    .pt1 {
+        padding-top: 5%;
+    }
+}
+
+@media screen and (max-width: 532px) {
+    .user {
+        top: -100px;
+    } 
+}
+
+@media screen and (max-width: 691px) {
+    .pt1 {
+        height: 570px;
+    }
+    .pt2 {
+        height: 570px;
+    }
+    .equipe {
+        height: 570px;
+    }
+}
+
+@media screen and (max-width: 507px) {
+    .user {
+        right: 75%;
+        top: -100px;
+    } 
+}
+/*--------CLOSE EQUIPE-------------------*/
+
+
+/*--------OPEN CONTATO-------------------*/
+.contato {
+    background-color: #472663;
+    padding: 50px 7%;
+}
+
+.formulario {
+    float: left;
+    width: 50%;
+    color: white;
+    padding: 20px 0px;
+    padding-right: 120px;
+}
+
+.formulario h2 {
+    font-weight: 100;
+    font-size: 35px;
+}
+
+.formulario p {
+    margin-top: 10px;
+    line-height: 25px;
+    font-size: 15px;
+    padding-right: 70px;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction:column;
+    margin-top: 25px;
+}
+
+.formulario input[type="text"] {
+    padding: 10px;
+    padding-left: 20px;
+    color: rgb(90, 90, 90);
+    outline: none;
+    border: 2px solid rgb(160, 160, 160);
+}
+
+.formulario textarea {
+    height: 160px;
+    resize: none;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 13px;
+    color: rgb(90, 90, 90);
+    outline: none;
+    border: 2px solid rgb(160, 160, 160);
+}
+
+.formulario input[type="text"]:nth-last-of-type(2), .formulario textarea, .formulario input[type="submit"] {
+    margin-top: 10px;
+}
+
+.formulario input[type="submit"] {
+    width: 100px;
+    padding: 10px 15px;
+    font-size: 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ff703e;
+    color: white;
+    cursor: pointer;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #d45628;
+}
+
+.container-map {
+    float: right;
+    width: 50%;
+}
+
+.map {
+    color: white;
+    padding: 20px 0px;
+    padding-left: 120px;
+}
+
+.map h2 {
+    font-weight: 100;
+    font-size: 35px;
+}
+
+.map-wraper {
+    height: 360px;
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1290px) {
+    .map-wraper {
+        height: 380px;
+    }
+}
+
+@media screen and (max-width: 1118px) {
+    .map-wraper {
+        height: 400px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1016px) {
+    .formulario {
+        padding-right: 60px;
+    }
+    .map-wraper {
+        height: 380px;
+        width: 100%;
+    }
+    .map {
+        padding-left: 60px;
+    }
+}
+
+@media screen and (max-width: 979px) {
+    .map-wraper {
+        height: 380px;
+    }
+    .formulario p {
+        padding-right: 0px;
+    }
+}
+
+@media screen and (max-width: 816px) {
+    .map-wraper {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 791px) {
+    .map-wraper {
+        height: 380px;
+    }
+    .contato {
+        padding: 50px 4%;
+    }
+}
+
+@media screen and (max-width: 764px) {
+    .map-wraper {
+        height: 380px;
+    }
+    .map {
+        padding-left: 30px;
+    }
+    .formulario {
+        padding-right: 30px;
+    }
+}
+
+@media screen and (max-width: 699px) {
+    .map-wraper {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 676px) {
+    .map-wraper {
+        height: 380px;
+    }
+    .contato {
+        padding: 50px 2%;
+    }
+    .map {
+        padding-left: 15px;
+    }
+    .formulario {
+        padding-right: 15px;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .map-wraper {
+        height: 405px;
+    }
+}
+
+@media screen and (max-width: 617px) {
+    .formulario {
+        float: none;
+        display: block;
+        width: 100%;
+        padding-right: 0px;
+    }
+    .formulario p {
+        margin-right: 0px;
+    }
+    .map {
+        padding-left: 0px;
+    }
+    .container-map {
+        float: none;
+        display: block;
+        width: 100%;
+    }
+    .contato {
+        padding: 50px 7%;
+    }
+    .map-wraper {
+        height: 360px;
+        width: 100%;
+    }
+    .formulario input[type="text"] {
+        padding-left: 20px;
+    }
+}
+/*--------CLOSE CONTATO-------------------*/
+/*--------CLOSE MAIN--------------------*/
+
+
+/*--------OPEN FOOTER-------------------*/
+footer {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    background-color: black;
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#esquerda {
+    float: left;
+    font-size: 12px;
+}
+
+#direita {
+    float: right;
+    font-size: 12px;
+}
+
+#esquerda span {
+    margin-right: 30px;
+}
+
+#direita span {
+    margin-left: 30px;
+}
+
+@media screen and (max-width: 755px) {
+    #esquerda span {
+        margin-right: 10px;
+    }
+    
+    #direita span {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 622px) {
+    #esquerda {
+        float: none;
+        font-size: 12px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    footer {
+        text-align: center;
+    }
+    #direita {
+        float: none;
+        font-size: 12px;
+        width: 100%;
+    }
+    #esquerda span {
+        margin-right: 0px;
+    }
+    #direita span {
+        margin-left: 0px;
+    }
+    
+}
+    </style>
+    <header>
+        <div class="container">
+            <div class="logo">LOGO</div><!--logo-->
+            <nav class="desktop-menu">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#serviços">serviços</a></li>
+                    <li><a href="#">sobre</a></li>
+                    <li id="last"> <a href="#">contato</a></li>
+                </ul>
+            </nav><!--desktop-menu-->
+            <nav class="mobile-menu">
+                <ul>
+                    <div class="opacity-1"><li class="first"><a href="#serviços">home</a></li></div>
+                    <div class="opacity-2"><li class="second"><a href="#serviços">serviços</a></li></div>
+                    <div class="opacity-3"><li class="third"><a href="#">sobre</a></li></div>
+                    <div class="opacity-4"><li class="fourty"> <a href="#">contato</a></li></div>
+                </ul>
+            </nav><!--mobile-menu-->
+            <div class="clear"></div><!--clear-->
+            <div class="texto-header">
+                <h1>Sistemas próprios <br>para empresas autênticas</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> Praesent sodales tincidunt tellus eget semper.</p>
+            </div><!--tetxo-header-->
+            <div class="clear"></div><!--clear-->
+        </div><!--container-->
+    </header>
+
+    <main>
+        <section class="serviços" id="serviços">
+            <div class="container">
+                <div class="texto-serviços">
+                    <h1>Desenvolvemos sistemas únicos</h1>
+                    <p>Para todas as plataformas e diversos segmentos:</p>
+                    <ul>
+                        <li>Lojas virtuais</li>
+                        <li>Sites institucionais</li>
+                        <li>Sistemas corporativos</li>
+                        <li>Muitos outros</li>
+                    </ul>
+                    <div class="clear"></div><!--clear-->
+                    <input type="button" name="contato" value="Entre em contato" />
+                </div><!--texto-serviços-->
+                <div class="celular"></div><!--celular-->
+                <div class="clear"></div><!--clear-->
+            </div><!--container-->
+        </section><!--serviços-->
+
+        <section class="sobre">
+            <div class="container">
+                <div class="texto-sobre">
+                    <h1>Desenvolvido por pessoas para pessoas</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta semper mi. Vestibulum dapibus vestibulum augue. Fusce libero nulla, interdum non tristique sed, posuere vel felis. Vestibulum consectetur molestie risus, ut placerat leo euismod eget. Nunc varius nunc magna.</p>
+                </div><!--texto-sobre-->
+                <img src="imagens/mockup.jpg">
+                <div class="clear"></div><!--clear-->
+            </div><!--container-->
+        </section><!--sobre-->
+
+        <section class="equipe">
+            <div class="pt1">
+                <div class="containerpt1">
+                    <h2>Nosso time</h2>
+                    <p>Curabitur mattis euismod tortor sed luctus. In diam tortor, sollicitudin in sapien malesuada, vestibulum suscipit ligula. Morbi consectetur non nulla vitae tempus. Nulla sit amet tellus tincidunt, volutpat ex sit amet, volutpat ante. Sed id hendrerit leo, a vestibulum tortor. Maecenas iaculis pellentesque nunc.</p>
+                </div><!--containerpt1-->
+                <div class="clear"></div><!--clear-->
+            </div><!--pt1-->
+            <div class="pt2">
+                <div class="containerpt2">
+                    <h2>Rafael Aurichi <div class="user"></div></h2>
+                    <span>Co - fundador / Desenvolvedor</span>
+                    <p>Phasellus sagittis tortor felis, eu interdum nulla ornare id. Aliquam erat volutpat. Integer fringilla est diam, ac semper tellus auctor et. Nunc sed lacus est. Integer luctus id justo sed aliquet.</p>
+                    <div class="slider">
+                        <span style="background-color: black;"></span>
+                        <span></span>
+                        <span></span>
+                    </div><!--slider-->
+                    <div class="clear"></div><!--clear-->
+                </div><!--containerpt2-->
+            </div><!--pt2-->
+        </section><!--equipe-->
+
+        <section class="contato">
+            <div class="container">
+                <div class="formulario">
+                    <h2>Entre em contato</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et posuere erat. Duis vulputate odio eu risus bibendum, at posuere odio porttitor.</p>
+                    <form>
+                        <input type="text" name="name" value(hidden)="name" placeholder="Nome" />
+                        <input type="text" name="email" value(hidden)="email" placeholder="Email" />
+                        <textarea name="mensagem" value(hidden)="mensagem" placeholder="Mensagem"></textarea>
+                        <input type="submit" name="enviar" value="Enviar" >
+                    </form>
+                </div><!--formulario-->
+                <div class="container-map">
+                    <div class="map">
+                        <h2>Faça uma visita</h2>
+                        <div id="map-wraper" class="map-wraper">
+                            <iframe scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" 
+                            src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=Av.%20Paulista%20S%C3%A3o%20Paulo+(Empresa)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" 
+                             width="100%" height="100%" frameborder="0"></iframe> 
+                            <a href='http://maps-generator.com/pt'>Maps-Generator</a> 
+                            <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=f25ce74e20af693da54fd6f8db29a8d21aa300e9'></script>
+                        </div><!--map-wraper-->
+                    </div><!--map-->
+                </div><!--container-map-->
+                <div class="clear"></div><!--clear-->
+            </div><!--container-->
+        </section><!--contato-->
+    </main>
+
+    <footer>
+        <div class="container">
+            <p id="esquerda">
+                <span>email@servidor.com</span><span> /</span><span> 11 55555-6666</span>
+            </p>
+            <p id="direita">
+                <span>Feito por pessoas para pessoas.</span><span> /</span><span> copyright 2021</span>
+            </p>
+        </div><!--container-->
+    </footer>
+</body>
+</html>

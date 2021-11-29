@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nome da Empresa</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <meta name="author" content="Rafael Aurichi">
+    <meta name="keywords" content="plavras-chaves">
+    <meta name="description" content="descriçao conteudo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">LOGO</div><!--logo-->
+            <nav class="desktop-menu">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#serviços">serviços</a></li>
+                    <li><a href="#sobre">sobre</a></li>
+                    <li id="last"> <a href="#contato">contato</a></li>
+                </ul>
+            </nav><!--desktop-menu-->
+            <nav class="mobile-menu">
+                <ul>
+                    <div class="opacity-1"><li class="first"><a href="#">home</a></li></div>
+                    <div class="opacity-2"><li class="second"><a href="#serviços">serviços</a></li></div>
+                    <div class="opacity-3"><li class="third"><a href="#sobre">sobre</a></li></div>
+                    <div class="opacity-4"><li class="fourty"> <a href="#contato">contato</a></li></div>
+                </ul>
+            </nav><!--mobile-menu-->
+            <div class="clear"></div><!--clear-->
+            <div class="texto-header">
+                <h1>Sistemas próprios <br>para empresas autênticas</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> Praesent sodales tincidunt tellus eget semper.</p>
+            </div><!--tetxo-header-->
+            <div class="clear"></div><!--clear-->
+        </div><!--container-->
+    </header>
+
+    <main>
+        <section class="serviços" >
+            <div class="container">
+                <div class="texto-serviços">
+                    <h1>Desenvolvemos sistemas únicos</h1>
+                    <p>Para todas as plataformas e diversos segmentos:</p>
+                    <ul>
+                        <li>Lojas virtuais</li>
+                        <li>Sites institucionais</li>
+                        <li>Sistemas corporativos</li>
+                        <li>Muitos outros</li>
+                    </ul>
+                    <div class="clear"></div><!--clear-->
+                    <input type="button" name="contato" value="Entre em contato" />
+                </div><!--texto-serviços-->
+                <div class="celular" id="serviços"></div><!--celular-->
+                <div class="clear"></div><!--clear-->
+            </div><!--container-->
+        </section><!--serviços-->
+
+        <section class="sobre" id="sobre">
+            <div class="container">
+                <div class="texto-sobre">
+                    <h1>Desenvolvido por pessoas para pessoas</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta semper mi. Vestibulum dapibus vestibulum augue. Fusce libero nulla, interdum non tristique sed, posuere vel felis. Vestibulum consectetur molestie risus, ut placerat leo euismod eget. Nunc varius nunc magna.</p>
+                </div><!--texto-sobre-->
+                <img src="imagens/mockup.jpg">
+                <div class="clear"></div><!--clear-->
+            </div><!--container-->
+        </section><!--sobre-->
+
+        <section class="equipe">
+            <div class="pt1">
+                <div class="containerpt1">
+                    <h2>Nosso time</h2>
+                    <p>Curabitur mattis euismod tortor sed luctus. In diam tortor, sollicitudin in sapien malesuada, vestibulum suscipit ligula. Morbi consectetur non nulla vitae tempus. Nulla sit amet tellus tincidunt, volutpat ex sit amet, volutpat ante. Sed id hendrerit leo, a vestibulum tortor. Maecenas iaculis pellentesque nunc.</p>
+                </div><!--containerpt1-->
+                <div class="clear"></div><!--clear-->
+            </div><!--pt1-->
+            <div class="pt2">
+                <div class="containerpt2">
+                    <h2>Rafael Aurichi <div class="user"></div></h2>
+                    <span>Co - fundador / Desenvolvedor</span>
+                    <p>Phasellus sagittis tortor felis, eu interdum nulla ornare id. Aliquam erat volutpat. Integer fringilla est diam, ac semper tellus auctor et. Nunc sed lacus est. Integer luctus id justo sed aliquet.</p>
+                    <div class="slider">
+                        <span style="background-color: black;"></span>
+                        <span></span>
+                        <span></span>
+                    </div><!--slider-->
+                    <div class="clear"></div><!--clear-->
+                </div><!--containerpt2-->
+            </div><!--pt2-->
+        </section><!--equipe-->
+
+        <section class="contato" id="contato">
+            <div class="container">
+                <div class="formulario">
+                    <h2>Entre em contato</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et posuere erat. Duis vulputate odio eu risus bibendum, at posuere odio porttitor.</p>
+                    <form>
+                        <input type="text" name="name" value(hidden)="name" placeholder="Nome" />
+                        <input type="text" name="email" value(hidden)="email" placeholder="Email" />
+                        <textarea name="mensagem" value(hidden)="mensagem" placeholder="Mensagem"></textarea>
+                        <input type="submit" name="enviar" value="Enviar" >
+                    </form>
+                </div><!--formulario-->
+                <div class="container-map">
+                    <div class="map">
+                        <h2>Faça uma visita</h2>
+                        <div id="map-wraper" class="map-wraper">
+                            <iframe scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" 
+                            src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=Av.%20Paulista%20S%C3%A3o%20Paulo+(Empresa)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" 
+                             width="100%" height="100%" frameborder="0"></iframe> 
+                            <a href='http://maps-generator.com/pt'> 
+                            <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=f25ce74e20af693da54fd6f8db29a8d21aa300e9'></script></a>
+                        </div><!--map-wraper-->
+                    </div><!--map-->
+                </div><!--container-map-->
+                <div class="clear"></div><!--clear-->
+            </div><!--container-->
+        </section><!--contato-->
+    </main>
+
+    <footer>
+        <div class="container">
+            <p id="esquerda">
+                <span>email@servidor.com</span><span> /</span><span> 11 55555-6666</span>
+            </p>
+            <p id="direita">
+                <span>Feito por pessoas para pessoas.</span><span> /</span><span> copyright 2021</span>
+            </p>
+        </div><!--container-->
+    </footer>
+</body>
+</html>
